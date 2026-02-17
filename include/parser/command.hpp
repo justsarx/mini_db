@@ -9,6 +9,8 @@
 enum class CommandType {
     Set,
     Get,
+    LPush,
+    LPop,
     Exit,
     Invalid
 };

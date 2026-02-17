@@ -53,6 +53,20 @@ Command parseCommand(const std::string& input) {
         return {CommandType::Get, {tokens[1]}};
     }
 
+    if (keyword == "LPUSH") {
+        if (tokens.size() != 3) {
+            return {CommandType::Invalid, {}};
+        }
+        return {CommandType::LPush, {tokens[1], tokens[2]}};
+    }
+
+    if (keyword == "LPOP") {
+        if (tokens.size() != 2) {
+            return {CommandType::Invalid, {}};
+        }
+        return {CommandType::LPop, {tokens[1]}};
+    }
+
     if (keyword == "EXIT") {
         if (tokens.size() != 1) {
             return {CommandType::Invalid, {}};

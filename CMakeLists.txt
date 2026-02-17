@@ -14,6 +14,8 @@ add_executable(mini_db src/main.cpp
         include/storage/value.hpp
         include/storage/string_value.hpp
         src/storage/string_value.cpp
+        src/storage/list_value.cpp
+        include/storage/list_value.hpp
 )
 
 target_include_directories(mini_db PRIVATE include)
